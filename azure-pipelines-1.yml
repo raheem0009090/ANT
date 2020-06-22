@@ -19,3 +19,14 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+
+- task: Deploy
+az artifacts universal publish
+    --organization https://dev.azure.com/raheemdevops/
+    --project="Test1"
+    --scope project
+    --feed ANT
+    --name my-first-package
+    --version 0.0.1
+    --description "Welcome to Universal Packages"
+    --path .
