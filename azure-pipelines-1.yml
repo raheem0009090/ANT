@@ -21,7 +21,6 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: '*/raheemdevops/'
-    publishLocation: 'FilePath'
-    TargetPath: '*/raheemdevops/'
+    PathtoPublish: '*/raheemdevops/'
+    ArtifactName: 'ANT'
+    publishLocation: 'Container'
