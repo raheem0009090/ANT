@@ -23,5 +23,5 @@ steps:
   inputs:
     CopyRoot: 'https://dev.azure.com/raheemdevops/'
     Contents: '*/raheemdevops/'
-    ArtifactName: 'Artifact'
+    ArtifactName: 'drop'
     ArtifactType: 'Container'
