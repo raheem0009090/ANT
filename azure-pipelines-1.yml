@@ -29,4 +29,4 @@ az artifacts universal publish
     --name my-first-package
     --version 0.0.1
     --description "Welcome to Universal Packages"
-    --path .
+    --path : https://dev.azure.com/raheemdevops/
