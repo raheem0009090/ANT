@@ -19,8 +19,3 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '*/raheemdevops/'
-    ArtifactName: 'ANT'
-    publishLocation: 'Container'
