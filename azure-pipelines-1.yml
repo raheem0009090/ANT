@@ -18,6 +18,14 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
+
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    CopyRoot: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)'
+    Contents: 'jar'
+    ArtifactName: 'drop'
+    ArtifactType: 'Container'
+
   
 - task: PublishBuildArtifacts@1
   inputs:
