@@ -21,8 +21,8 @@ steps:
 
 - task: CopyPublishBuildArtifacts@1
   inputs:
-    CopyRoot: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)'
-    Contents: 'jar'
+    CopyRoot: '$(Build.ArtifactStagingDirectory)'
+    Contents: '**'
     ArtifactName: 'drop'
     ArtifactType: 'Container'
 
