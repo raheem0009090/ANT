@@ -26,7 +26,7 @@ steps:
     #sourceFolder:  # Optional
     #contents: '**' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
-    #cleanTargetFolder: false # Optional
+    cleanTargetFolder: true 
     #overWrite: false # Optional
     #flattenFolders: false # Optional
     #preserveTimestamp: false # Optional
