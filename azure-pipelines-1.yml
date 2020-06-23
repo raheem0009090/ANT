@@ -23,7 +23,7 @@ steps:
 # Copy files from a source folder to a target folder using patterns matching file paths (not folder paths)
 - task: CopyFiles@2
   inputs:
-    sourceFolder:  '$(Agent.BuildDirectory)'
+    sourceFolder:  '$(Agent.BuildDirectory)/*.jar'
     #contents: '**' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     #cleanTargetFolder: false # Optional
