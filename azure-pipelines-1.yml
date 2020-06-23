@@ -15,12 +15,12 @@ steps:
     buildFile: 'build.xml'
     options: 
     publishJUnitResults: true
-    testResultsFiles: 'D:\a\1\s\build/TEST-*.xml'
+    testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+  
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/*jar'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
