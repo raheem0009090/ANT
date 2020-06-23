@@ -22,7 +22,7 @@ steps:
 - task: CopyPublishBuildArtifacts@1
   inputs:
     CopyRoot: '$(Build.ArtifactStagingDirectory)'
-    Contents: '**'
+    Contents: '**/'
     ArtifactName: 'drop'
     ArtifactType: 'Container'
 
