@@ -12,13 +12,13 @@ pool:
 steps:
 - task: Ant@1
   inputs:
-    workingDirectory: ''
     buildFile: 'build.xml'
+    options: 
+    publishJUnitResults: true
+    testResultsFiles: 'D:\a\1\s\build/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
