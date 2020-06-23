@@ -23,7 +23,7 @@ steps:
 # Copy files from a source folder to a target folder using patterns matching file paths (not folder paths)
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/$(Build.BuildId)'
+    SourceFolder: '$(Build.SourcesDirectory)/build'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     #overWrite: false # Optional
